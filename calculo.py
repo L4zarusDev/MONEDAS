@@ -49,13 +49,7 @@ def pedir_dispositivo():
 
 
 def obtener_fuerza_desde_web(tipo_teclado: str):
-    """
-    Intenta obtener un valor aproximado de fuerza de actuación desde internet
-    usando la API pública de DuckDuckGo.
 
-    - Si encuentra un número tipo '45 g', lo devuelve como float.
-    - Si no, devuelve (None, snippet_texto) para ayudarte a decidir.
-    """
     if tipo_teclado == "laptop":
         query = "peso necesario para presionar la tecla de un teclado de laptop"
     else:
@@ -110,14 +104,7 @@ def obtener_fuerza_desde_web(tipo_teclado: str):
 
 
 def buscar_fuerza_en_nube(info_dispositivo):
-    """
-    1) Intenta obtener fuerza desde internet y, si no hay número,
-       te muestra un snippet del texto para que tú decidas.
-    2) Si aún así no quieres meter dato, usa valores típicos:
-       - Laptop: 29 g
-       - Mecánico: 45 g
-       - Otro: pregunta a mano.
-    """
+  
     tipo_teclado = info_dispositivo["tipo_teclado"]
 
     print()
@@ -332,3 +319,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
